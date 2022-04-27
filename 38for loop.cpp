@@ -2,7 +2,7 @@
 #include<string.h>
 main()
 {
-	int a,i,j=0,x=0;
+	int a,i;
 	printf("enter  numbers in line\n ");
 	scanf("%d",&a);
 	i=1;
