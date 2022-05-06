@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+void fun();
+int check(int n);
+int main()
+ {
+	fun();
+ }
+void fun()
+  {
+	printf("%d",check(9));
+	
+	printf("\n%d",check(8));
+	
+	printf("\n%d",check(21));
+	
+	printf("\n%d",check(4));
+	
+  }
+int check(int n)
+  {
+   
+    return( n % 10 <=2 ||  n % 10 <= 8 ); 
+  }
