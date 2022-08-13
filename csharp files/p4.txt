@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace area_of_rectangle
+{
+     class Program
+    {
+        static void Main(string[] args,int area)
+        {
+            int len, breadth;
+            Console.WriteLine("length");
+            len = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("breadth");
+            breadth = Convert.ToInt32(Console.Read());
+
+            int area of rectangle = 2 * len * breadth;
+           // area = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("area of rectangle = " + area);
+           Console.ReadLine();
+        }
+    }
+}
