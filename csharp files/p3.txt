@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AccessSpecifiers__protectedtest_ex1
+{
+    class ProtectedTest
+    {
+        protected string name = "shiri";
+
+        protected void Msg(string msg)
+        {
+            Console.WriteLine("Hello " + msg);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ProtectedTest protectedTest = new ProtectedTest();
+            //accessing protected variable
+
+            Console.WriteLine("Hello " + protectedTest.name);//error
+            //accessing protected function
+
+            protectedTest.Msg("swami ayyar");//error
+        }
+    }
+}
