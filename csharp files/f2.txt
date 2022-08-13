@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace class_InternalTest__AccessSpecifiers__ex3
+{
+    class InternalTest
+    {
+        protected internal string name = "santosh kumar";
+
+        protected internal void Msg(string msg)
+        {
+            Console.WriteLine("Hello " + msg);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            InternalTest internaltest = new InternalTest();
+            //accessing protrcted internal variable
+            Console.WriteLine("Hello " + internaltest.name);
+            //accessing protected internal function
+            internaltest.Msg("peter decosta");
+            Console.ReadLine();
+       }
+    }
+}
