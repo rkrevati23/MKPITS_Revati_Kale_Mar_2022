@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace clsstud_overload__methwith_0__1__2_3_4_parameters
+{
+    class Student
+    {
+        int rno;
+        string name,course;
+        int fees;
+
+        public void getdata()
+
+        {
+            rno = 11;
+            name = "revati";
+            course = "java";
+            fees = 20000;
+        }
+        //method overloaded
+        public void getdata(int rno)
+        {
+            this.rno = rno;
+        }
+        public void getdata(int rno,string name)
+        {
+            this.rno=rno;
+            this.name = name;
+        }
+        public void getdata(int rno,string name,int fees)
+        {
+            this.rno = rno;
+            this.name = name;
+            this.fees = fees;
+
+        }
+        public void getdata(int rno,string name,string course,int fees)
+        {
+            this.rno = rno;
+            this.name = name;
+            this.course = course;
+            this.fees = fees;
+        }
+        public void display()
+        {
+            Console.WriteLine("enter roll no=" + rno);
+            Console.WriteLine("enter stduent name=" + name);
+            Console.WriteLine("enter course=" + course);
+            Console.WriteLine("enter fees=" + fees);
+        }
+        
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student std = new Student();
+            std.getdata();
+            std.display();
+
+            Console.WriteLine(".........student details,,,,,,,,,,");
+            Student std1 = new Student();
+            std1.getdata(11,"revati");
+            std1.display();
+
+            Console.WriteLine("---------student datails-----------");
+            Student std2 = new Student();
+            std2.getdata(11, "aniket", 2300);
+            std2.display();
+
+            Console.WriteLine("--------student dailes---------");
+            Student std3 = new Student();
+            std3.getdata(11, "ishika", "dotnate", 10000);
+            std3.display();
+
+            Console.WriteLine("---------student details-------");
+            Console.ReadLine();
+
+        }
+    }
+}
