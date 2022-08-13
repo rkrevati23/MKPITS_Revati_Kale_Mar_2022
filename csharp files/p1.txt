@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _3_num_addition
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1, n2, n3;
+            Console.WriteLine("enter n1");
+            n1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter n2");
+            n2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter n3");
+            n3 = Convert.ToInt32(Console.ReadLine());
+
+            int result = n1 + n2 + n3;
+            Console.WriteLine("addition of 3 num = " + result);
+            Console.ReadLine();
+
+        }
+    }
+}
