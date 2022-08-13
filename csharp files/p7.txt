@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace array_sort_mrthod_example1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating num array of 2 rows and 3 column
+            int[] num = { 3, 5, 6, 2, 1, 6 };
+            Array.Sort(num);
+
+              //display the value of array
+
+            for(int i=0; i<num.Length; i++)
+            {
+                Console.Write(num[i] +"\t");
+            }
+            Console.ReadLine(); 
+        }
+    }
+}
