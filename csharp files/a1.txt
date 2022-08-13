@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace constrwith_noparamtr_createparameterizedconst4emp
+{
+    class Employee
+    {
+        int empno;
+        string empname;
+        string designation;
+        int salary;
+        //creating a constructor with no parameters
+        public Employee()
+        {
+            empno = 1;
+            empname = "Revati";
+            designation = "manager";
+            salary = 300000;
+
+        }
+        // contructor with 4 parameters (parameterized constructor);
+        public Employee(int empno, string empname, string designation, int salary)
+        {
+
+            this.empno = empno;
+            this.empname = empname;
+            this.designation = designation;
+            this.salary = salary;
+        }
+        public void display()
+        {
+            Console.WriteLine("empno = " + empno);
+            Console.WriteLine("empname = " + empname);
+            Console.WriteLine("designation = " + designation);
+            Console.WriteLine("salary = " + salary);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();  //this will call constructor automatically
+            emp.display();
+            Console.WriteLine("----------------employee1 details------------");
+           
+            Employee emp1 = new Employee(11, "aniket", "manager", 300000);  //this will call parameterized constructor
+            emp1.display();
+            Console.WriteLine("-----------Employee1 details----------");
+
+            Console.WriteLine("enter employee no");
+            int empno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter employee name");
+            string empname = Console.ReadLine();
+            Console.WriteLine("enter employee designa");
+            string designation = Console.ReadLine();
+            Console.WriteLine("enter salary");
+            int salary = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("------------employee2 details-----------");
+            Employee emp2 = new Employee(empno, empname, designation, salary);
+            emp2.display();
+            Console.ReadLine();
+                                                                           }
+    }
+}
