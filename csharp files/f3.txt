@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace class_method_getproductname_displayorderex1
+{
+    class Product
+    {
+        int proid;
+        string proname;
+        int prorate;
+        string proqnty;
+
+        //creatine methods
+        public void getprodata(int i,string n,int r,string q)
+        {
+            proid = i;
+            proname = n;
+            prorate= r;
+            proqnty = q;
+
+
+        }
+        public void displayorder()
+        {
+            Console.WriteLine("proid " + proid);
+            Console.WriteLine("proname " + proname);
+            Console.WriteLine("prorate " + prorate);
+            Console.WriteLine("proqnty " + proqnty);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Product info = new Product();
+
+            Console.WriteLine("enter product id");
+            int proid = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter product name");
+            string proname = Console.ReadLine();
+            Console.WriteLine("enter product rate");
+            int prorate = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter product quantity");
+            string proqnty = Console.ReadLine();
+
+            info.getprodata(proid,proname,prorate,proqnty);
+            info.displayorder();
+            Console.ReadLine();
+
+        }
+    }
+}
