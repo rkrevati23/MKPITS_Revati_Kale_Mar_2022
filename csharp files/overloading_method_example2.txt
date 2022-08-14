@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace overloading_method_example2
+{
+    internal class Program
+    {
+        static int Add(int a, int b, int c)
+        {
+            return a + b + c;
+
+        }
+        static int Add(int a, int b, int c, int d)
+        {
+            return a + b + c + d;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Add(1, 2, 3));
+            Console.WriteLine(Add(11, 23, 20, 43));
+            Console.ReadLine();
+        }
+    }
+}
