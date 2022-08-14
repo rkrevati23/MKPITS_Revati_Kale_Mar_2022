@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_getcardata_nd_displaycardata_class_method
+{
+    class Car
+    {
+        string makeobject;
+        int modelno;
+
+        //creating method
+        public void getcardata()
+        {
+            Console.WriteLine("enter  make object");
+            makeobject = Console.ReadLine();
+
+            Console.WriteLine("enter car modelno");
+            modelno = Convert.ToInt32(Console.ReadLine());
+        }
+        public void displaycardata()
+        {
+            Console.WriteLine("makeobject " + makeobject);
+            Console.WriteLine("modelno " + modelno);
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Car car = new Car();
+            car.getcardata();
+            car.displaycardata();
+            Console.ReadLine();
+        }
+    }
+}
