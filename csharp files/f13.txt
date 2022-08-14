@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace dowhileloop_print_table_program
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            int i = 1;
+            int res = 1;
+            Console.WriteLine("enter number");
+            num = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+                res = num * i;
+                i++;
+                Console.WriteLine("{0} * {1}={2}", res, i, res);
+            }
+            while (i <= 10);
+            Console.ReadLine();
+        }
+    }
+}
