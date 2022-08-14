@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace getcustdata_displaydata_class_method
+{
+    class customer
+    {
+        int custno;
+        int custtelno;
+        string custname;
+        string custaddress;
+
+        //creating methods
+        public void getcustdata(int a1, int a2, string b1, string b2)
+        {
+            custno = a1;
+            custtelno = a2;
+            custname = b1;
+            custaddress = b2;
+        }
+        public void displaycustdata()
+        {
+            Console.WriteLine("custno " + custno);
+            Console.WriteLine("custtelno " + custtelno);
+            Console.WriteLine("custname " + custname);
+            Console.WriteLine("custaddress " + custaddress);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            customer id = new customer();
+            Console.WriteLine("enter customer no");
+            int custno = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter customer telno");
+            int custtelno = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter customer name");
+            string custname = Console.ReadLine();
+
+            Console.WriteLine("enter customer address");
+            string custaddress = Console.ReadLine();
+
+            id.getcustdata(custno,custtelno,custname,custaddress);
+            id.displaycustdata();
+
+            Console.ReadLine();
+        }
+    }
+}
