@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_Private_Specifier_Example_2
+{
+    class Program
+    {
+        private string name = "santosh kumar";
+
+        private void Msg(string msg)
+        {
+            Console.WriteLine("Hello " + msg);
+        }
+
+    
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            //accessing private variable
+
+            Console.WriteLine("Hello " + p.name);
+            //accessing private function
+            p.Msg("peter deaosta");
+            Console.ReadLine();
+
+        }
+    }
+}
