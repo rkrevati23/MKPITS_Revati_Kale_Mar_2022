@@ -1,0 +1,15 @@
+using System;
+namespace hello_program
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //console is a class system namespace having method for input,output operations
+
+            Console.WriteLine("hello how are you");
+            Console.ReadLine();
+
+        }
+    }
+}
