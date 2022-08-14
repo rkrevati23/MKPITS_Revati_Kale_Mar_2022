@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace csharp_base_cls_person_derived_cls_emp
+{
+  public class Person
+    {
+        public int empno;
+
+    }
+    public class Employee : Person
+    {
+        public int salary;
+        public string desig;
+    }
+
+    internal class ProgramTeastInheritance
+
+    {
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();
+            emp.empno = 11;
+            emp.salary = 22000;
+            emp.desig = "manager";
+
+            Console.WriteLine("empno " + emp.empno);
+            Console.WriteLine("salary " + emp.salary);
+            Console.WriteLine("desig " + emp.desig);
+            Console.ReadLine();
+
+
+        }
+    }
+}
