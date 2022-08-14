@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_Single_Level_Inheritance_personempex3
+{
+    public class Person
+    {
+         string name;
+         string address;
+
+        public void getpersondata(string name,string address)
+        {
+            this.name = name;
+            this.address = address;
+
+        }
+        public void displayPersonData()
+        {
+            Console.WriteLine("name=" + name);
+            Console.WriteLine("address " + address);
+        }
+    }
+    public class Employee: Person
+    {
+        int empno;
+        int salary;
+
+        public void getemployeedata(int empno,int salary)
+        {
+            this.empno=empno;
+            this.salary = salary;
+        }
+        public void displayemployeedata()
+        {
+            Console.WriteLine("emno " + empno);
+            Console.WriteLine("salary " + salary);
+        }
+    }
+    public class TestInheritance
+    {
+        static void Main(string[] args)
+        {
+            Employee s1 = new Employee();
+            s1.getpersondata("anish", "delhi");
+            s1.getemployeedata(12, 30000);
+            s1.displayPersonData();
+            s1.displayemployeedata();
+            Console.ReadLine();
+        }
+    }
+}
