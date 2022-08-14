@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_class_student_rno_mark_grade_per
+{
+    public class Student
+    {
+        public int rno;
+        public string name;
+        public int mathmark;
+        public int phymark;
+        public int chemmark;
+        public float per;
+        public int total;
+        public string grade;
+
+        public void result(int rno, string name,int mathmark,int phymark,int chemmark,float per,int total,string grade)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("roll no " + rno);
+            Console.WriteLine("name " + name);
+            Console.WriteLine("total " + total);
+            Console.WriteLine("per " + per);
+            Console.WriteLine("grade " + grade);
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string grade;
+            Student Stud = new Student();
+            Console.WriteLine("enter roll no");
+            int rno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter student name");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("enter maths mark");
+            int mathmark = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter physics mark");
+            int phymark = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter chemistry mark");
+            int chemmark = Convert.ToInt32(Console.ReadLine());
+
+            int total = mathmark + phymark + chemmark;
+            float per = (total / 300.0f) * 100.0f;
+
+            if (per > 75)
+            {
+                grade = "distinction";
+            }
+            else if (per > 65 && per < 75) 
+            {
+                grade = "first division";
+            }
+
+            else
+            {
+                grade = "fail";
+            }
+            Stud.result(rno, name, total, per, grade);
+            Console.ReadLine();
+        }
+    }
+}
