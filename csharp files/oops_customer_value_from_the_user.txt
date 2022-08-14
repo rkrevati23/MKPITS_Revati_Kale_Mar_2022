@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_customer_value_from_the_user
+{
+    class Customer
+    {
+        public int custno;
+        public string custname;
+        public string custaddress;
+        public int custtelno;
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer id = new Customer();
+
+            Console.WriteLine("enter customer no");
+            id.custno = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter customer name");
+            id.custname = Console.ReadLine();
+
+            Console.WriteLine("enter customer Address");
+            id.custaddress = Console.ReadLine();
+
+            Console.WriteLine("enter customer telno");
+            id.custtelno = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("custno " + id.custno);
+            Console.WriteLine("custname " + id.custname);
+            Console.WriteLine("custaddress " + id.custaddress);
+            Console.WriteLine("custtelno " + id.custtelno);
+
+            Console.ReadLine();
+        }
+    }
+}
