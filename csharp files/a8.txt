@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_Private_Access_Specifier_ex_1
+{
+    class PrivateTest
+    {
+        private string name = "santhosh kumar";
+
+        private void Msg(string msg)
+        {
+            Console.WriteLine("Hello " + msg);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            PrivateTest privateTest= new PrivateTest();
+            //accessing private variable
+            Console.WriteLine("Hello " + privateTest.name);
+            //accessing private function
+            privateTest.Msg("peter Decosta");
+
+        }
+
+    }
+}
