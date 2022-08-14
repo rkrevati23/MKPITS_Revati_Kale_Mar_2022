@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace switch_proname_prorate_quantity
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int pro_rate, pro_quantity, ttl_amount;
+            string pro_name;
+            Console.WriteLine("Enter product name");
+            pro_name = Console.ReadLine();
+
+            Console.WriteLine("Enter product rate");
+            pro_rate = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter product quantity");
+            pro_quantity = Convert.ToInt32(Console.ReadLine());
+            ttl_amount = pro_rate * pro_quantity;
+
+            Console.WriteLine("Total amount: " + ttl_amount);
+            Console.ReadLine();
+
+        }
+    }
+}
