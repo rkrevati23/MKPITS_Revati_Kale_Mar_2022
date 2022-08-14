@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pass_by_value_parameter_method
+{
+    internal class Program
+    {
+        static void AddOne(int X)
+        {
+            X++;  //increment X
+        }
+        static void Main()
+        {
+            int K = 6;
+            AddOne(K);
+            Console.WriteLine(K);  //display the value 6,not 7
+            Console.ReadLine(); 
+        }
+   
+    }
+}
