@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ifelseif_vowels_or_not
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char ch;
+            Console.WriteLine("enter character");
+            ch = Convert.ToChar(Console.ReadLine());
+            if (ch == 'a')
+            {
+                Console.WriteLine("character is vowel");
+            }
+            else if (ch == 'e')
+            {
+                Console.WriteLine("character is vowel");
+            }
+            else if (ch == 'i')
+            {
+                Console.WriteLine("characer is  vowel");
+            }
+            else if (ch == 'o')
+            {
+                Console.WriteLine("character is vowel");
+
+            }
+            else if (ch == 'u')
+            {
+                Console.WriteLine(" character is vowel");
+            }
+            else
+            {
+                Console.WriteLine(" character is not vowel");
+            }
+            Console.ReadLine();
+        }
+    }
+}
