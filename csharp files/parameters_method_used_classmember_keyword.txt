@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace parameters_method_used_classmember_keyword
+{
+    class employee
+    {
+        int empno;
+        string empname;
+        float salary;
+
+        //creating methods
+        public void getdata(int empno, string empname, float salary)
+        {
+            this.empno = empno;
+            this.empname = empname;
+            this.salary = salary;
+        }
+        public void displaydata()
+        {
+            Console.WriteLine("empno " + empno);
+            Console.WriteLine("empname " + empname);
+            Console.WriteLine("salary " + salary);
+        }
+    }
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating an object (instance) of employee class
+            //syntax classname objectname = new classname();
+
+            employee emp = new employee();
+
+            Console.WriteLine("enter employee no");
+            int eno = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter employee name");
+            string en = Console.ReadLine();
+
+            Console.WriteLine("enter salary");
+            float sal = Convert.ToSingle(Console.ReadLine());
+
+            emp.getdata(eno, en, sal);
+            emp.displaydata();
+            Console.ReadLine();
+        }
+    }
+}
