@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using student.cs;
+
+namespace Csharp_Public_Access_Specifier_ex2
+{
+    class student
+    {
+        protected string name;
+        public void getdata()
+        {
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
