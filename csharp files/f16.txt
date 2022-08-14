@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace float_double_datatyle
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double b1;
+            Console.WriteLine("enter double number");
+            b1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("entered double number=" + b1);
+            Console.ReadLine();
+        }
+    }
+}
