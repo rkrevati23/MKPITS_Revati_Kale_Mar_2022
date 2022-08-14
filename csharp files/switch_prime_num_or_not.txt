@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace switch_prime_num_or_not
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, n1, res=0;
+            Console.WriteLine("enter number");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            for(i=1; i<=n1; i++)
+            {
+                if(n1%1==0)
+                {
+                    res++;
+                }
+            }
+            switch(res)
+            {
+                case 1:
+                    Console.WriteLine("prime number");
+                    break;
+                default:
+                    Console.WriteLine("number is not prime");
+                    break;
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
