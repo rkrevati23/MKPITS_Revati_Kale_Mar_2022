@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace if_else_eligible_for_vote
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //program to accept a age from thr user and print wheter eligible to vote or not
+            int age;
+            Console.WriteLine("enter age");
+            age = Convert.ToInt32(Console.ReadLine());
+            if(age<18)
+            {
+                Console.WriteLine("not eligible to vote");
+
+            }
+            else
+            {
+                Console.WriteLine("eligible for vote");
+            }
+            Console.ReadLine();
+        }
+    }
+}
