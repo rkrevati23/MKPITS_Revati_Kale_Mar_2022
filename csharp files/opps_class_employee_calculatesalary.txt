@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_class_employee_calculatesalary
+{
+    public class Employee
+    {
+        public int empno;
+        public string empname;
+        public string designation;
+        public double basic_salary;
+
+        public void calculate_salary(int empno, string empname, string designation, double basic_salary)
+        {
+            this.empno = empno;
+            this.empname = empname;
+            this.designation = designation;
+            this.basic_salary = basic_salary;
+
+            double hra = .32 * basic_salary;
+            double da = .43 * basic_salary;
+            double ta = .45 * basic_salary;
+
+            double total_salary = hra + da + ta + basic_salary;
+            Console.WriteLine("");
+            Console.WriteLine("Employee number: " + empno);
+            Console.WriteLine("Employee name: " + empname);
+            Console.WriteLine("Employee designation: " + designation);
+            Console.WriteLine("Total Salary: " + total_salary);
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();
+            Console.Write("Enter number ");
+            int empno = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter employee name ");
+            string empname = Console.ReadLine();
+
+            Console.Write("Enter employee designation ");
+            string designation = Console.ReadLine();
+
+            Console.Write("Enter basic salary ");
+            double basic_salary = Convert.ToSingle(Console.ReadLine());
+
+            emp.calculate_salary(empno, empname, designation, basic_salary);
+            Console.ReadLine();
+        }
+    }
+}
