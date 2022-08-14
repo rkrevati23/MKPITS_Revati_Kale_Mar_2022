@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_class_circle_area_circ
+{
+    public class circle
+    {
+        public double radius;
+
+        public void calculatearea(double radius)
+        {
+            this.radius = radius;
+            double res = radius * radius * 3.14;
+            Console.WriteLine("Area of circle= " + res);
+            // Console.WriteLine("Area of circle= " + (3.14 * rad * rad));  
+        }
+        public void calculatecirc(double radius)
+        {
+            this.radius = radius;
+            double res = 2 * 3.14 * radius;
+            Console.WriteLine("Circumference of circle= " + res);
+            // Console.WriteLine("Circumference of circle= " + (2*3.14 * rad));
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            circle cir = new circle();
+            Console.Write("Enter radius of circle: ");
+            double rad = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("");
+            cir.calculatearea(rad);
+            cir.calculatecirc(rad);
+            Console.ReadLine();
+
+
+        }
+    }
+}
