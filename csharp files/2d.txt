@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace if_elseif_grade_per_submark
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int s1, s2, s3, total;
+            float per;
+            string grade= "";
+            Console.WriteLine("enter subject 1 mark");
+            s1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter subject 2 mark");
+            s2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter subject 3mark");
+            s3 = Convert.ToInt32(Console.ReadLine());
+
+            total = s1 + s2 + s3;
+            Console.WriteLine("total=" + total);
+
+            per =( total / 300.0f) * 100.0f;
+            Console.WriteLine("per=" + per);
+
+            if (per >= 75) 
+            {
+                grade = "distinction";
+            }
+            else if (per>=65 && per<75)
+            {
+                grade = "first class";
+             }
+            else
+            {
+                grade = "fail";
+            }
+            Console.WriteLine("grade=" + grade);
+            Console.ReadLine();
+        }
+        
+    }
+}
