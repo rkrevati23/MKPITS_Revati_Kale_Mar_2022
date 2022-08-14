@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_Protected_Internal_Access_Specifierex2
+{
+    class ProtectedTest
+    {
+        protected internal string name = "shiri";
+
+        protected void Msg(string msg)
+        {
+            Console.WriteLine("Hello " + msg);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ProtectedTest pp = new ProtectedTest();
+            pp.name = "ravi";
+            Console.WriteLine(pp.name);
+            Console.ReadLine();
+        }
+    }
+}
