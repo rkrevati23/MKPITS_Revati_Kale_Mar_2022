@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace hierarchical_inheritance_exaple1
+{
+    public class Person
+    {
+        string name;
+        string address;
+
+        public void getpersondata(string name,string address)
+        {
+            this.name = name;
+            this.address = address;
+        }
+        public void displaypersondata()
+        {
+            Console.WriteLine("name " + name);
+            Console.WriteLine("address " + address);
+        }
+    }
+    public class Student : Person
+    {
+        int rno;
+        int marks;
+
+        public void getstudentdata(int rno,int marks)
+        {
+            this.rno = rno;
+            this.marks = marks;
+        }
+        public void displaystudentdata()
+        {
+            Console.WriteLine("rno " + rno);
+            Console.WriteLine("marks " + marks);
+        }
+    }
+    public class Employee : Person
+    {
+        int salary;
+        string desig;
+
+        public void getemployeedata(int salary,string desig)
+        {
+            this.salary = salary;
+            this.desig = desig;
+        }
+        public void displayemployeedata()
+        {
+            Console.WriteLine("salary " + salary);
+            Console.WriteLine("designation " + desig);
+        }
+    }
+    class TestInheritance
+    {
+       public static void Main(string[] args)
+        {
+            //creating object of student class
+            Student s1 = new Student();
+            s1.getpersondata("alisha", "nagpur");
+            s1.getstudentdata(11, 23);
+            s1.displaypersondata();
+            s1.displaystudentdata();
+
+            //cresting object employee clss
+            Employee emp = new Employee();
+            emp.getpersondata("nayara", "dehli");
+            emp.getemployeedata(23000, "manager");
+            emp.displaypersondata();
+            emp.displayemployeedata();
+            Console.ReadLine();
+        }
+    }
+}
