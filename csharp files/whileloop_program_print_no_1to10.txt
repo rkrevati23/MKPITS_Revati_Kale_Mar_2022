@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace whileloop_program_print_no_1to10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 1;
+            while(n<=10)
+            {
+                Console.WriteLine(n);
+                n++;
+            }
+            Console.ReadLine();
+        }
+    }
+}
