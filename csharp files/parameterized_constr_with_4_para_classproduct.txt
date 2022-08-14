@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace parameterized_constr_with_4_para_classproduct
+{
+    class Product
+    {
+        int proid;
+        string prona;
+        int price;
+        int qnty;
+
+
+        public Product()
+        {
+            proid = 1;
+            prona = "pen";
+            price = 10;
+            qnty = 5;
+        }
+        public Product(int proid, string prona, int price, int qnty)
+        {
+            this.proid = proid;
+            this.prona = prona;
+            this.price = price;
+            this.qnty = qnty;
+        }
+        public void display()
+        {
+            Console.WriteLine("proid =" + proid);
+            Console.WriteLine("prona= " + prona);
+            Console.WriteLine("price= " + price);
+            Console.WriteLine("quantity= " + qnty);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Product pro = new Product();
+            pro.display();
+            Console.WriteLine("-----------product detailes----");
+            Product pro1 = new Product(11, "pencil", 10, 5);
+            pro1.display();
+            Console.WriteLine("--------product1 details-------");
+            Console.WriteLine("enter product no");
+            int prono = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter product name");
+            string prona = Console.ReadLine();
+            Console.WriteLine("enter price");
+            int price = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter product quantity");
+            int qnty = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("----------product2 details-------");
+            Product pro2 = new Product(prono,prona,price,qnty);
+            pro2.display();
+            Console.ReadLine();
+
+
+        }
+    }
+}
