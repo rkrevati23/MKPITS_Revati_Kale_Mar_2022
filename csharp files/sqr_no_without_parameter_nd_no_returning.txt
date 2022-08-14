@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sqr_no_without_parameter_nd_no_returning
+{
+    internal class Program
+    {
+        static void square()
+        {
+            int num = 5;
+            int sq = num * num;
+            Console.WriteLine("square=" + sq);
+        }
+        static void Main(string[] args)
+        {
+            square();
+            Console.WriteLine("bye");
+            Console.ReadLine();
+        }
+    }
+}
