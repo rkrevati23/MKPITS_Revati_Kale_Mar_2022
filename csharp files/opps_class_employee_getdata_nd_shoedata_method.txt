@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_class_employee_getdata_nd_shoedata_method
+{
+    internal class Employee
+    {
+        int empno;
+        string empname;
+        float salary;
+
+        //creating method
+        public void getdata()
+        {
+            Console.WriteLine("enter employee no");
+            empno = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter employee name");
+            empname = Console.ReadLine();
+
+            Console.WriteLine("enter employee salary");
+            salary = Convert.ToSingle(Console.ReadLine());
+        }
+        public void displaydata()
+        {
+            Console.WriteLine("empno " + empno);
+            Console.WriteLine("empname " + empname);
+            Console.WriteLine("salary " + salary);
+        }
+    }
+        class Program
+        {
+
+       static void Main(string[] args)
+        {
+        Employee emp = new Employee();
+        emp.getdata();
+        emp.displaydata();
+        Console.ReadLine();
+        }
+    }
+}
