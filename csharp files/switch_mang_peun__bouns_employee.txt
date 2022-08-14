@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace switch_mang_peun__bouns_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string empname, designation;
+            int bouns = 0;
+            Console.WriteLine("enter empname");
+            empname = Console.ReadLine();
+
+            Console.WriteLine("enter designation");
+            designation = Console.ReadLine();
+
+            switch(designation)
+            {
+                case "manager":
+                    bouns = 10000;
+                    break;
+                case "clerk":
+                    bouns = 5000;
+                    break;
+                case "peon":
+                    bouns = 2000;
+                    break;
+                default:
+                    Console.WriteLine("invalid designation");
+                    break;
+            }
+            Console.WriteLine("empname={0},bouns={1}", empname, bouns);
+            Console.ReadLine();
+        }
+    }
+}
