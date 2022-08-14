@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_Aggregation__HAS_A_Relationship_ex1
+{
+    public class Address
+    {
+        public string addrline, state, city;
+
+        public Address(string addrline, string city, string state)
+        {
+            this.addrline = addrline;
+            this.city = city;
+            this.state = state;
+        }
+    }
+    public class Employee
+    {
+        public int id;
+        public string name;
+        public Address addr;  //employee HAS -A Address
+        public Employee(int id, string name, Address addr)
+        {
+            this.id = id;
+            this.name = name;
+            this.addr = addr;
+        }
+        public void display()
+        {
+            Console.WriteLine(id + "" + name + "" +
+                addr.addrline + "" + addr.city + "" + addr.state);
+        }
+
+    }
+
+    public class TestAggregation
+    {
+        public static void Main(string[] args)
+        {
+            Address a1 = new Address("G-13,sec-3", "Noida", "UP");
+            Employee e1 = new Employee(1, "Sonoo", a1);
+            e1.display();
+            Console.ReadLine();
+        }
+    }
+}
