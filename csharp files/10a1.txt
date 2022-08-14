@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace object_class_student_example1
+{
+    class Student
+    {
+        private int rno;
+        private string name;
+
+        public void getdata(int rno,string name)
+        {
+            this.rno = rno;
+            this.name = name;
+        }
+        public void displaydata()
+        {
+            Console.WriteLine("rno " + rno);
+            Console.WriteLine("name " + name);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            //s.rno=1; eror
+            s.getdata(11,"reva");
+            s.displaydata();
+            Console.ReadLine();
+        }
+    }
+}
