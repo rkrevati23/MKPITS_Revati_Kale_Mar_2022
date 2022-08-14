@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace switch_for_even_or_odd_number
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1, res;
+            Console.WriteLine("enter number");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            res = n1 % 2;
+            switch(res)
+            {
+                case 0:
+                    Console.WriteLine("number is even");
+                    break;
+                default:
+                    Console.WriteLine("number is odd");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}
