@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace goto_end__parameter_program
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 11;
+            if (num % 2 == 0) goto even;
+            Console.WriteLine("no is odd");
+            goto end;
+
+        even:
+            Console.WriteLine("no is even");
+            goto end;
+        end:
+            Console.WriteLine("bye");
+            Console.ReadLine();
+
+        }
+    }
+}
