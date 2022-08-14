@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_class_customer_field_program
+{
+    class Customer
+    {
+        public int custno;
+         public string custname;
+        public string custaddress;
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating class customer field custno,custname,custaddress
+            Customer id = new Customer();
+            id.custno = 11;
+            id.custname = "aniv";
+            id.custaddress = "delhi";
+
+            Console.WriteLine("custno " + id.custno);
+            Console.WriteLine("custname " + id.custname);
+            Console.WriteLine("custaddress " + id.custaddress);
+            Console.ReadLine();
+
+
+        }
+    }
+}
