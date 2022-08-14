@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace multilevel_inheritance_long_exaple2
+{
+    public class Person
+    {
+        string name;
+        string address;
+
+        public void getpersondata(string name,string address)
+        {
+            this.name = name;
+            this.address = address;
+        }
+        public void displaypersondata()
+        {
+            Console.WriteLine("name " + name);
+            Console.WriteLine("address " + address);
+        }
+    }
+    public class Employee:Person
+    {
+        int salary;
+        string designation;
+
+        public void getemployeedata(int salary,string designation)
+        {
+            this.salary = salary;
+            this.designation = designation;
+        }
+        public void displayemployeedata()
+        {
+            Console.WriteLine("salary " + salary);
+            Console.WriteLine("designation " + designation);
+        }
+    }
+    public class ParttimeEmployee : Employee
+    {
+        int no_of_hours;
+
+        public void getParttimeEmployeedata(int no_of_hours)
+        {
+            this.no_of_hours = no_of_hours;
+        }
+        public void  displayParttimeEmployeedata()
+        {
+            Console.WriteLine("no of hours " + no_of_hours);
+        }
+    }
+
+     class TeastInheritance
+    {
+        static void Main(string[] args)
+        {
+            ParttimeEmployee pemp = new ParttimeEmployee();
+            pemp.getpersondata("alish", "DELHI");
+            pemp.getemployeedata(20000, "manager");
+            pemp.getParttimeEmployeedata(23);
+            pemp.displaypersondata();
+            pemp.displayemployeedata();
+            pemp.displayParttimeEmployeedata();
+            Console.ReadLine();
+        }
+    }
+}
