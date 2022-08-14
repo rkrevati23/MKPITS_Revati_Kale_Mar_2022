@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace opps_class_method_add_sub_multi_div
+{
+    public class  calculation
+    {
+        public float n1;
+        public float n2;
+
+        public void addition(float n1, float n2)
+        {
+            Console.WriteLine("addition " + (n1 + n2));
+        }
+        public void subtraction(float n1,float n2)
+        {
+            Console.WriteLine("subtraction: "+ (n1 - n2));
+
+        }
+        public void multiplication(float n1, float n2)
+        {
+            Console.WriteLine("multiplication "+ (n1 * n2));
+
+        }
+        public void division(float n1,float n2)
+        {
+            Console.WriteLine("division " + n1 / n2);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            calculation cal = new calculation();
+
+            Console.WriteLine("enter first number");
+           float n1 = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("enter second number");
+            float n2 = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("");
+            cal.addition(n1, n2);
+
+            Console.WriteLine("");
+            cal.subtraction(n1, n2);
+
+            Console.WriteLine("");
+            cal.multiplication(n1, n2);
+
+            Console.WriteLine("");
+            cal.division(n1, n2);
+            Console.ReadLine();
+
+        }
+    }
+}
