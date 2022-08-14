@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_Public_Access_Specifier_ex1
+{
+    class PubliCTest
+    {
+        public string name = "shantosh kumar";
+
+        public void Msg(string msg)
+        {
+            Console.WriteLine("Hello " + msg);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            PubliCTest publictest = new PubliCTest();
+            //Accessing public varible
+            Console.WriteLine("Hello " + publictest.name);
+            //accesing public functin
+            publictest.Msg("Peter Decosta");
+            Console.ReadLine();
+        }
+    }
+}
