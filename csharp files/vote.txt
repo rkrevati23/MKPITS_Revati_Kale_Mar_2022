@@ -1,0 +1,31 @@
+5. Write a C# Sharp program to read the age of a candidate and determine whether it is eligible
+ for casting his/her own vote. 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace eligible_for_vot_or_not
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int age;
+            Console.WriteLine("enter age");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            if(age>=18)
+            {
+                Console.WriteLine("eligible for vote");
+            }
+            else
+            {
+                Console.WriteLine("eligible is not for vote");
+            }
+            Console.ReadLine();
+        }
+    }
+}
