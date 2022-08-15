@@ -1,0 +1,58 @@
+4. Write a C# Sharp program to find whether a given year is a leap year or not. 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace check_positive_nad_negetive_num
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            Console.WriteLine("enter number");
+            num = Convert.ToInt32(Consousing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace csharp_year_is_a_leap_year_or_not
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int year;
+            Console.WriteLine("enter year");
+            year = Convert.ToInt32(Console.ReadLine());
+
+            if(year%4==0)
+            {
+                Console.WriteLine("year is leep year");
+
+            }
+            else
+            {
+                Console.WriteLine("year is not leep year");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+le.ReadLine());
+            if(num>0)
+            {
+                Console.WriteLine("number is positive");
+            }
+            else
+            {
+                Console.WriteLine("number is negtive");
+            }
+            Console.ReadLine();
+        }
+    }
+}
