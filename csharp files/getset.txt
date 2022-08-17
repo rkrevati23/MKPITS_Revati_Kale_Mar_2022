@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace encapsulates_provides_getter_nd_setter_functions1
+{
+    class Employee
+    {
+        public string empname { get; set; }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();
+            emp.empname = "ravi"; // this will call setter
+            Console.WriteLine("empname " + emp.empname);
+            Console.ReadLine();
+               
+        }
+    }
+}
