@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace runtime_polymorphism__method_overriding_
+{
+    class Account
+    {
+        public int actno;
+        public int balance = 1000;
+
+        public virtual string deposit(int actno,int amount)
+        {
+            return "deposite method of account class";
+        }
+        public string showbalnce()
+        {
+            return "balance amount : " + balance;
+        }
+    }
+    class Current :Account
+    {
+        //overriding the base class depsit method
+
+        public override string deposit(int actno,int amount)
+        {
+            this.actno = actno;
+            balance = balance + amount;
+            return "amount deposited sucesfully wuthout interest in current class";
+
+        }
+    }
+    class Saving : Account
+    {
+        //overriding the base class deposit method
+
+        public override string deposit(int actno, int amount)
+        {
+            this.actno = actno;
+            int interest = 500;
+            balance = balance + amount + interest;
+            return "amount deposit successfully with interest in saving class";
+        }
+    }
+    public  class TestBase
+
+      
+    {
+      public   static void Main(string[] args)
+        {
+            Console.WriteLine("enter account no");
+            int actno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter amount to be deposited");
+            int amount = Convert.ToInt32(Console.ReadLine());
+
+            Account act = new Current();
+            string res = act.deposit(actno, amount);
+            Console.WriteLine("account no is " + act.actno);
+            Console.WriteLine(res);
+
+            res = act.showbalnce();
+            Console.WriteLine(res);
+
+            Console.WriteLine("enter account no");
+            int actno1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter amount to be deposited");
+            int  amount1 = Convert.ToInt32(Console.ReadLine());
+
+            Account sav = new Saving();
+            string res1 = sav.deposit(actno1, amount1);
+            Console.WriteLine("Account no is "+sav.actno);
+
+            Console.WriteLine(res1);
+            res1 = sav.showbalnce();
+            Console.WriteLine(res1);
+            Console.ReadLine();a
+
+        }
+    }
+}
