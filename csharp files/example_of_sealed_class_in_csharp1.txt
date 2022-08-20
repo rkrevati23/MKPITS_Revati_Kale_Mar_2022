@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sealed_class_in_c_sharrp_example2
+{
+    abstract class person
+    {
+        public string name;
+    }
+    class student:person
+    {
+        public int rno;
+    }
+   sealed class parttime : student
+    {
+        public int hours;
+    }
+    /*class newstudent:parttime //error
+    {
+
+    }*/
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //person p = new person(); //error
+            parttime p = new parttime();
+            p.rno = 22;
+            p.name = "ravi";
+            p.hours = 5;
+            Console.WriteLine("rno " + p.rno);
+            Console.WriteLine("name " + p.name);
+            Console.WriteLine("hours " + p.hours);
+            Console.ReadLine();
+        }
+    }
+}
