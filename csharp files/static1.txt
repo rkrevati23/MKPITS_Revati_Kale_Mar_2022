@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Csharp_static_is_a_keyword__type_not_instance
+{
+    internal class Program
+    {
+        void display()
+        {
+            Console.WriteLine("hello");
+        }
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.display();
+        }
+    }
+}
